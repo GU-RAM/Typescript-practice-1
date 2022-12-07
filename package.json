@@ -1,0 +1,22 @@
+{
+  "name": "practicing-promises-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "start": "tsc --p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GU-RAM/Typescript-practice-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GU-RAM/Typescript-practice-1/issues"
+  },
+  "homepage": "https://github.com/GU-RAM/Typescript-practice-1#readme",
+  "dependencies": {
+    "typescript": "^4.9.3"
+  }
+}
