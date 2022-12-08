@@ -1,16 +1,16 @@
 import { movieInfo, moviesInfo } from "./movieInfoFns.js";
 import { getFilmData } from "./api.js";
 
-export function filmData(searchedMovie: HTMLInputElement) {
+export function filmData(searchedMovie: HTMLInputElement): void {
   const movieInfoDiv = document.querySelector(".one-movie-info");
   movieInfoDiv ? movieInfoDiv.remove() : null;
 
   getFilmData(searchedMovie.value)
     .then((data) => {
-      let ageOfMovie = new Date().getFullYear() - data.Year;
+      let ageOfMovie = new Date().getFullYear() - +data.Year;
       let actors = data.Actors;
       let country = data.Country;
-      movieInfo(ageOfMovie, actors, country);
+      movieInfo({ ageOfMovie, actors, country });
     })
     .catch(() => console.log("error occured"));
   searchedMovie.value = "";
@@ -21,7 +21,7 @@ export function multipleFilmsData(
   multipleMoviesInput1: HTMLInputElement,
   multipleMoviesInput2: HTMLInputElement,
   multipleMoviesInput3: HTMLInputElement
-) {
+): void {
   const moviesInfoDiv = document.querySelector(".multiple-movies-info");
   moviesInfoDiv ? moviesInfoDiv.remove() : null;
 

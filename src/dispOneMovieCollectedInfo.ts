@@ -5,7 +5,7 @@ export function displayCollectedInfo(
   actorsNames: string,
   currencies: string[],
   flags: string[]
-) {
+): void {
   const searchedMovieInfo = document.createElement("ul");
   searchedMovieInfo.className = "one-movie-info";
   searchedMovieInfo.innerHTML = `<div>Movie was made ${ageOfMovie} years ago </div> <div><span class='searched-info-headers'>Actors are: </span> ${actorsNames} </div> <div class="currencies-flags"></div>`;

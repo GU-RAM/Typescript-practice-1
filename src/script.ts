@@ -29,7 +29,7 @@ const multipleMoviesBtn: HTMLButtonElement | null = document.querySelector(
 );
 
 // Multiple movies search info button
-multipleMoviesBtn?.addEventListener("click", () => {
+multipleMoviesBtn?.addEventListener("click", (): void => {
   if (
     multipleMoviesInput1?.value &&
     multipleMoviesInput2?.value &&
